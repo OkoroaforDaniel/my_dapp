@@ -1,4 +1,5 @@
 {
+  "$schema": "./package.schema.json",
   "homepage": "http://OkoroaforaforDaniel.github.io/brainnest_task",
   "name": "nft-minter",
   "version": "0.1.0",

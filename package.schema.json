@@ -1,0 +1,17 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "npm's package.json",
+    "type": "object",
+    "required": [
+        "name",
+        "version"
+    ],
+    "properties": {
+        "name": {
+            "type": "string"
+        },
+        "version": {
+            "type": "string"
+        }
+    }
+}
