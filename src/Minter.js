@@ -31,7 +31,7 @@ const Minter = (props) => {
         <p>
           {" "}
           🦊{" "}
-          <a target="_blank" href={`https://metamask.io/download.html`}>
+          <a target="_blank" rel="noreferrer" href={`https://metamask.io/download.html`}>
             You must install Metamask, a virtual Ethereum wallet, in your
             browser.
           </a>
@@ -40,12 +40,22 @@ const Minter = (props) => {
     }
   }
  
-  useEffect(async () => {
-    const {address, status} = await getCurrentWalletConnected();
-    setWallet(address)
-    setStatus(status);
+//   useEffect(async () => {
+//     const {address, status} = await getCurrentWalletConnected();
+//     setWallet(address)
+//     setStatus(status);
 
+//     addWalletListener();
+// }, []);
+
+useEffect(() => {
+  const init = async () => {
+    const { address, status } = await getCurrentWalletConnected();
+    setWallet(address);
+    setStatus(status);
     addWalletListener();
+  };
+  init();
 }, []);
 
   const connectWalletPressed = async () => { //TODO: implement
